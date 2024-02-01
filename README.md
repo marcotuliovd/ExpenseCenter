@@ -17,7 +17,7 @@ Cada despesa é caracterizada pelos seguintes atributos:
 - **Id:** Identificador único da despesa.
 - **Descrição:** Descrição detalhada da despesa.
 - **Data:** Data em que a despesa ocorreu.
-- **Usuário:** Usuário associado à despesa (relacionamento com a tabela de Usuários).
+- **Usuário:** Usuário associado à despesa.
 - **Valor:** Valor em reais da despesa.
 
 ## Validações
@@ -47,7 +47,7 @@ A validação da API é reforçada através de testes unitários, garantindo a r
 
 Para executar o projeto, siga os seguintes passos:
 
-1. Clone o repositório: `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+1. Clone o repositório: `git clone https://github.com/marcotuliovd/ExpenseCenter.git`
 2. Instale as dependências: `npm install`
 3. Execute o servidor: `npm start`
 
