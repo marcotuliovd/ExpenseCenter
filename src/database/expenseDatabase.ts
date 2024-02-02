@@ -8,18 +8,21 @@ export async function CreateExpenseDatabase(expense: Expense) {
   const [insertExpense] = await connection
     .execute<ResultSetHeader>(SQL, [expense.Id, expense.Description,
     expense.Date, expense.User, expense.Value, expense.Created_at]);
+  
   return expense;
 }
 
 export async function GetExpenseByIdAndUser(id: string, user: string) {
   const SQL = 'SELECT * FROM ExpenseCenter.expense WHERE id = ? AND user = ?';
   const [expense] = await connection.execute<ResultSetHeader>(SQL, [id, user]);
+
   return expense;
 }
 
 export async function GetAllExpensesByUser(user: string) {
   const SQL = 'SELECT * FROM ExpenseCenter.expense WHERE user = ?';
   const [expenses] = await connection.execute<ResultSetHeader>(SQL, [user]);
+  
   return expenses;
 }
 
